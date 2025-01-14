@@ -1,40 +1,14 @@
-# Unity-Logs-Viewer
+# My Forked Project
 
+이 저장소는 [원본 프로젝트](https://github.com/original/repo)를 포크하여 커스텀한 버전입니다.
 
-Please note with new unity you can view device logs on editor console window, check the new attach menu in editor console window.
+## 변경 사항
+- **다크모드 지원 추가**
+  - 기존 UI에서 다크테마 적용
+  - 배경 및 텍스트 색상 반전 처리
+  - 설정에서 다크모드 토글 가능
 
-
-Using this tool you can easily check your editor console logs inside the game itself! 
-All what you have to do is to make a circle gesture using your mouse (click and drag) or your finger (touch and drag) on the mobile screen to show all these logs! 
-
-You can download also from unity asset store
-https://www.assetstore.unity3d.com/en/#!/content/12047
-
-
-#### To setup log viewer do the following
-    1 - create reporter from menu (Reporter->Create) at first scene your game start.
-    2 - then set the ” Scrip execution order ” in (Edit -> Project Settings ) of Reporter.cs to be the highest.
-
-
-    
-     
-### Version 1.8
-    - Add Copy to clipboard.
-	- Merge Fix for Unity 2019.
-	- Fix ReporterModificationProcessor is annoying.
-	- Fix waste ram.
-    
-### Version 1.7
-    - Add Save logs button( thanks for Ahmed Shbli ).
-    - Fix deprecated code for new unity.
-    - Fix Warnings.
-    - Fix loading scene from asset bundle error.
-
-
-
-    
-    
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J9MX5C6Q7B2NY">
-    <img src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_cc_147x47.png">
-    </img>
-</a>
+## 설치 방법
+1. 저장소 클론
+   ```sh
+   git clone https://github.com/myusername/repo.git
