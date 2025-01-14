@@ -19,7 +19,7 @@ public class ReporterMessageReceiver : MonoBehaviour
 		if (Screen.width < 1000)
 			reporter.size = new Vector2(32, 32);
 		else
-			reporter.size = new Vector2(48, 48);
+			reporter.size = new Vector2(32, 32);//new Vector2(48, 48);
 
 		reporter.UserData = "Put user date here like his account to know which user is playing on this device";
 	}
@@ -34,7 +34,7 @@ public class ReporterMessageReceiver : MonoBehaviour
 		//TO DO : pause your game and disable its GUI
 	}
 
-	void OnLog(Reporter.Log log)
+	void OnLog(Log log)
 	{
 		//TO DO : put you custom code 
 	}
