@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using UnityEditor;
-using UnityEditor.Callbacks;
 
 using System.IO;
-using System.Collections;
+using System.Drawing;
 
 
 public class ReporterEditor : Editor
@@ -16,6 +15,24 @@ public class ReporterEditor : Editor
 		reporterObj.name = "Reporter";
 		Reporter reporter = reporterObj.AddComponent<Reporter>();
 		reporterObj.AddComponent<ReporterMessageReceiver>();
+		Canvas canvas = reporterObj.AddComponent<Canvas>();
+		canvas.vertexColorAlwaysGammaSpace = true;
+		canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+
+		GameObject childObj = new GameObject();
+		var image = childObj.AddComponent<UnityEngine.UI.Image>();
+		image.color = new UnityEngine.Color(149/255f, 63/255f, 128/255f, 100/255f);
+		var rect = childObj.GetComponent<RectTransform>();
+		rect.anchorMin = new Vector2(0.5f, 0.5f);
+		rect.anchorMax = new Vector2(0.5f, 0.5f);
+		rect.pivot = new Vector2(0.5f, 0.5f);
+		rect.sizeDelta = new Vector2(Screen.width / 4, Screen.height / 4);
+		rect.position = new Vector3(0,0,0);
+		childObj.name = "GestureArea";
+		childObj.transform.SetParent(reporterObj.transform, false);
+
+		reporter.GestureArea = rect;
+
 		//reporterObj.AddComponent<TestReporter>();
 		
 		// Register root object for undo.

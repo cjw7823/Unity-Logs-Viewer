@@ -17,9 +17,9 @@ public class ReporterMessageReceiver : MonoBehaviour
 			reporter = gameObject.GetComponent<Reporter>();
 
 		if (Screen.width < 1000)
-			reporter.size = new Vector2(32, 32);
+			reporter.UI_size = new Vector2(32, 32);
 		else
-			reporter.size = new Vector2(32, 32);//new Vector2(48, 48);
+			reporter.UI_size = new Vector2(32, 32);//new Vector2(48, 48);
 
 		reporter.UserData = "Put user date here like his account to know which user is playing on this device";
 	}
